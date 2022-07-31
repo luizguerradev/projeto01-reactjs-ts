@@ -1,0 +1,21 @@
+.wrapper{
+    max-width: 70rem; /*1120/16 = 70 1rem=16px*/
+    margin: 2rem auto;
+    padding: 0 1rem; /*1REM DIMINUIR A TELA NUM TAMANHO MENOR NÃO VAI COLAR NO LADO DA TELA*/
+
+    display: grid; 
+    grid-template-columns: 256px 1fr/*VAI TER O TAMANHO FLEXÍVEL */;
+    gap: 2rem;
+    align-items: flex-start ;
+  
+}
+
+@media (max-width: 768px){
+    html{
+        font-size:87.5%;
+    }
+
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,63 @@
+.sidebar{
+    background: var(--gray-800);
+    border-radius: 8px;
+    overflow: hidden; /*Não fica arrendondado mesmo o container da imagem sendo arrendondado*/
+    }
+.cover{
+    width: 100%;
+    height: 72px;
+    object-fit: cover; /*se não colocar a imagem fica desfocada, mostra o centro da imagem e corta o resto*/
+}
+.profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /*margin-top: -2rem; - PARA ESSE RESULTADO É USADO O CALC ABAIXO*/
+    margin-top: calc(0px - 1.5rem - 6px);/*1.5rem que é metade de 3rem do height e width 6px que é metade do 12px do mesmo */
+}
+
+
+
+.profile strong{
+    margin-top:1rem;
+    color:var(--gray-100);
+    line-height:1.6;
+}
+
+.profile span{
+    font-size: 0.875rem;
+    color: var(--gray-400);
+    line-height: 1.6;
+}
+
+.sidebar footer{
+    border-top: 1px solid var(--gray-600);
+    margin-top: 1.5rem;
+    padding: 1.5rem 2rem 2rem;
+}
+
+.sidebar footer a{
+    /*width: 100%;  com display block ele já coloca automaticamente */
+    background: transparent;
+    color: var(--green-500);
+    border: 1px solid var(--green-500);
+    border-radius: 8px;
+    height: 50px;
+    padding: 0 1.5rem;
+    font-weight: bold;
+    display: block;
+    text-decoration: none;
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.5rem;
+
+    transition: color 0.1s, background-color 0.1s; /*TRANSIÇÃO PARA MUDANÇA DE COR*/
+}
+.sidebar footer a:hover{
+    background: var(--green-500);
+    color: var(--white);
+}
